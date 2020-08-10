@@ -6,7 +6,6 @@
 // @namespace Привет ребяиа
 // @version 0.8
 // @updateURL https://github.com/SonOfStep/MovingISLO/blob/master/index.js
-// @downloadURL https://raw.githubusercontent.com/SonOfStep/MovingISLO/master/index.js
 // @authot Omar "SonOfStep" Nurmakhanov
 // @match *://172.30.149.11:8282/OE/appointment/remsandapps*
 // @grant none
