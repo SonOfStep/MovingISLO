@@ -4,7 +4,7 @@
 // @description Hacking the transfer to a nursing station in another Department
 // @description:ru Взлом перевода на сестринский пост в другое отделении
 // @namespace Привет ребяиа
-// @version 1.0
+// @version 1.3.1
 // @updateURL https://raw.githubusercontent.com/SonOfStep/MovingISLO/master/index.js
 // @authot Omar "SonOfStep" Nurmakhanov
 // @match *://172.30.149.11:8282/OE/appointment/remsandapps*
@@ -75,7 +75,6 @@ $.ajaxSetup({
             ( $(elem).is( '[value="0"]' ) ) || 
             (  $( elem ).text() === "Место хранения..." ) ) ) {
             $(elem).remove();
-            console.log( $(elem).text() )
           }
         } )
 
