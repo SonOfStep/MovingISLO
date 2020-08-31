@@ -4,7 +4,7 @@
 // @description Hacking the transfer to a nursing station in another Department
 // @description:ru Взлом перевода на сестринский пост в другое отделении
 // @namespace Привет ребяиа
-// @version 1.3
+// @version 1.0
 // @updateURL https://raw.githubusercontent.com/SonOfStep/MovingISLO/master/index.js
 // @authot Omar "SonOfStep" Nurmakhanov
 // @match *://172.30.149.11:8282/OE/appointment/remsandapps*
@@ -69,16 +69,21 @@ $.ajaxSetup({
       };
 
       $( document ).ajaxComplete( function( e ) {
-        if ( !( $("option").is('[value=' + idPosts + ']') ) ) {
-          $("#placeid option").each( ( item, elem ) => {
-            if ( !($(elem).is( '[value="0"]' ) ) ) {
-              $(elem).remove();
-            }
-          } )
 
+        $("#placeid option").each( ( item, elem ) => {
+          if ( !( 
+            ( $(elem).is( '[value="0"]' ) ) || 
+            (  $( elem ).text() === "Место хранения..." ) ) ) {
+            $(elem).remove();
+            console.log( $(elem).text() )
+          }
+        } )
+
+        if ( !( $("option").is('[value=' + idPosts + ']') ) ) {
+          
           $("#placeid").append("<option value = " + idPosts + ">Сестринский пост</option>");
           $("#placeid").append("<option value = " + idProcKab + ">Процедурный кабинет</option>");
-          
+
         } else if ( $("option").is('[value="0"') ){
 
         }
